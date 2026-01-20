@@ -50,28 +50,28 @@
 
 | ID | Tarea | Agente | Prioridad | Estado |
 |----|-------|--------|-----------|--------|
-| S1-01 | Crear proyecto Laravel 12 con Composer | @devops | Alta | ⬜ Pendiente |
-| S1-02 | Configurar Docker (PHP 8.4, MariaDB, Redis, Nginx) | @devops | Alta | ⬜ Pendiente |
-| S1-03 | Configurar .env y variables de entorno | @devops | Alta | ⬜ Pendiente |
-| S1-04 | Instalar y configurar dependencias base | @developer | Alta | ⬜ Pendiente |
-| S1-05 | Crear estructura de directorios (Domain/, Actions/, Services/) | @architect | Alta | ⬜ Pendiente |
-| S1-06 | Configurar PHPStan level 8 | @developer | Media | ⬜ Pendiente |
-| S1-07 | Configurar Laravel Pint (code style) | @developer | Media | ⬜ Pendiente |
-| S1-08 | Configurar Pest PHP para testing | @tester | Media | ⬜ Pendiente |
-| S1-09 | Crear pipeline CI básico (GitHub Actions) | @devops | Media | ⬜ Pendiente |
-| S1-10 | Documentar setup en README | @developer | Baja | ⬜ Pendiente |
+| S1-01 | Crear proyecto Laravel 12 con Composer | @devops | Alta | ✅ Completado |
+| S1-02 | Configurar Docker (PHP 8.4, MariaDB, Redis, Nginx) | @devops | Alta | ✅ Completado |
+| S1-03 | Configurar .env y variables de entorno | @devops | Alta | ✅ Completado |
+| S1-04 | Instalar y configurar dependencias base | @developer | Alta | ✅ Completado |
+| S1-05 | Crear estructura de directorios (Domain/, Actions/, Services/) | @architect | Alta | ✅ Completado |
+| S1-06 | Configurar PHPStan level 8 | @developer | Media | ✅ Completado |
+| S1-07 | Configurar Laravel Pint (code style) | @developer | Media | ✅ Completado |
+| S1-08 | Configurar Pest PHP para testing | @tester | Media | ✅ Completado |
+| S1-09 | Crear pipeline CI básico (GitHub Actions) | @devops | Media | ✅ Completado |
+| S1-10 | Documentar setup en README | @developer | Baja | ✅ Completado |
 
 ### Entregables
-- [ ] Proyecto Laravel 12 corriendo en Docker
-- [ ] Makefile con comandos básicos funcionando
-- [ ] CI ejecutando tests, lint y análisis estático
-- [ ] README con instrucciones de instalación
+- [x] Proyecto Laravel 12 corriendo en Docker
+- [x] Makefile con comandos básicos funcionando
+- [x] CI ejecutando tests, lint y análisis estático
+- [x] README con instrucciones de instalación
 
 ### Definition of Done Sprint 1
-- [ ] `make install` completa sin errores
-- [ ] `make test` ejecuta tests base de Laravel
-- [ ] `make lint` y `make analyze` pasan
-- [ ] CI en GitHub Actions verde
+- [x] `make install` completa sin errores
+- [x] `make test` ejecuta tests base de Laravel
+- [x] `make lint` y `make analyze` pasan
+- [x] CI en GitHub Actions verde
 
 ---
 
