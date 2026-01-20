@@ -37,7 +37,7 @@
 | S1-02 | Configurar Docker (PHP 8.4, MariaDB, Redis, Nginx) | @devops | ✅ Completado | 2026-01-20 |
 | S1-03 | Configurar .env y variables de entorno | @devops | ✅ Completado | 2026-01-20 |
 | S1-04 | Instalar y configurar dependencias base | @developer | ✅ Completado | 2026-01-20 |
-| S1-05 | Crear estructura de directorios (Domain/, Actions/, Services/) | @architect | ⬜ Pendiente | - |
+| S1-05 | Crear estructura de directorios (Domain/, Actions/, Services/) | @architect | ✅ Completado | 2026-01-20 |
 | S1-06 | Configurar PHPStan level 8 | @developer | ⬜ Pendiente | - |
 | S1-07 | Configurar Laravel Pint (code style) | @developer | ⬜ Pendiente | - |
 | S1-08 | Configurar Pest PHP para testing | @tester | ⬜ Pendiente | - |
@@ -143,10 +143,9 @@ _Ninguno actualmente_
 
 ## Próximas Acciones
 
-1. **Inmediato**: Crear repositorio en GitHub
-2. **Hoy**: Completar estructura de directorios
-3. **Esta semana**: Configurar PHPStan, Pint y Pest
-4. **Sprint 1**: Pipeline CI funcionando
+1. **Inmediato**: Completar estructura de directorios
+2. **Hoy**: Configurar PHPStan, Pint y Pest
+3. **Esta semana**: Pipeline CI funcionando
 
 ---
 
@@ -158,8 +157,8 @@ _Ninguno actualmente_
 - ✅ Laravel 12 instalado
 - ✅ Conexión a MariaDB verificada
 - ✅ Tests base pasando
-- ⏳ Pendiente: Crear repo en GitHub
-- ⏳ Pendiente: Estructura de directorios
+- ✅ Repositorio en GitHub creado ([nemesiovillena/sesion14](https://github.com/nemesiovillena/sesion14))
+- ✅ Estructura de directorios avanzada creada (`Domain`, `Actions`, `Services`)
 - ⏳ Pendiente: Herramientas de calidad de código
 
 ---
