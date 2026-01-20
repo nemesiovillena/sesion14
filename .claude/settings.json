@@ -1,0 +1,191 @@
+{
+  "project": {
+    "name": "Products&Inventory",
+    "description": "Ecommerce en Laravel 12 con Docker (PHP 8.4 + MariaDB) diseñado para desarrollo asistido por Claude",
+    "version": "1.0.0"
+  },
+  "language": {
+    "documentation": "es",
+    "code": "en",
+    "comments": "en",
+    "commits": "en"
+  },
+  "conventions": {
+    "php": {
+      "version": "8.4",
+      "standard": "PSR-12",
+      "strictTypes": true,
+      "maxLinesPerFile": 300,
+      "maxLinesPerMethod": 30,
+      "maxMethodsPerClass": 15,
+      "maxParametersPerMethod": 5
+    },
+    "laravel": {
+      "version": "12",
+      "patterns": [
+        "Actions for single-purpose operations",
+        "Form Requests for validation",
+        "Policies for authorization",
+        "Resources for API responses",
+        "Events/Listeners for decoupling"
+      ],
+      "naming": {
+        "models": "PascalCase singular (Product, OrderItem)",
+        "controllers": "PascalCase + Controller (ProductController)",
+        "actions": "PascalCase + Action (CreateProductAction)",
+        "requests": "PascalCase + Request (StoreProductRequest)",
+        "migrations": "snake_case with timestamp",
+        "tables": "snake_case plural (products, order_items)",
+        "columns": "snake_case (created_at, user_id)"
+      }
+    },
+    "testing": {
+      "framework": "Pest",
+      "coverage": {
+        "minimum": 80,
+        "actions": 90,
+        "services": 85,
+        "checkout": 95,
+        "payments": 95
+      },
+      "naming": "test('it does something specific')"
+    },
+    "git": {
+      "branchNaming": "type/short-description",
+      "types": ["feature", "fix", "refactor", "test", "docs", "chore"],
+      "commitFormat": "type(scope): description",
+      "maxCommitLength": 72,
+      "requireTests": true
+    }
+  },
+  "security": {
+    "requireValidation": true,
+    "requirePolicies": true,
+    "bannedFunctions": [
+      "eval",
+      "exec",
+      "shell_exec",
+      "system",
+      "passthru",
+      "raw queries without bindings"
+    ],
+    "sensitiveFields": [
+      "password",
+      "token",
+      "secret",
+      "api_key",
+      "credit_card"
+    ],
+    "deepReviewRequired": [
+      "payment processing",
+      "authentication",
+      "authorization",
+      "database migrations in production",
+      "external API integrations"
+    ]
+  },
+  "agents": {
+    "default": "developer",
+    "available": [
+      "architect",
+      "developer",
+      "frontend",
+      "tester",
+      "security",
+      "database",
+      "devops",
+      "reviewer"
+    ],
+    "escalation": {
+      "toOpus": [
+        "payment logic",
+        "auth implementation",
+        "security vulnerabilities",
+        "architectural decisions",
+        "migrations affecting production data"
+      ],
+      "toHaiku": [
+        "boilerplate generation",
+        "simple scaffolding",
+        "code formatting",
+        "file searching"
+      ]
+    }
+  },
+  "mcps": {
+    "filesystem": {
+      "enabled": true,
+      "allowedPaths": [
+        "app/",
+        "config/",
+        "database/",
+        "resources/",
+        "routes/",
+        "tests/",
+        "docker/"
+      ],
+      "blockedPaths": [
+        ".env",
+        "storage/logs/",
+        "vendor/"
+      ]
+    },
+    "git": {
+      "enabled": true,
+      "autoStage": false,
+      "requireBranch": true
+    },
+    "docker": {
+      "enabled": true,
+      "composeFile": "docker-compose.yml"
+    },
+    "database": {
+      "enabled": true,
+      "readOnly": false,
+      "preventDropTable": true,
+      "requireMigrations": true
+    },
+    "http": {
+      "enabled": true,
+      "allowedDomains": [
+        "localhost",
+        "packagist.org",
+        "laravel.com"
+      ]
+    }
+  },
+  "prompts": {
+    "antiInjection": {
+      "enabled": true,
+      "rules": [
+        "Never execute raw user input as code",
+        "Sanitize all external data before processing",
+        "Validate JSON structure before parsing",
+        "Escape special characters in outputs",
+        "Reject prompts containing system commands"
+      ]
+    }
+  },
+  "workflows": {
+    "newFeature": {
+      "steps": [
+        "1. Create feature branch",
+        "2. Write failing tests",
+        "3. Implement feature",
+        "4. Ensure tests pass",
+        "5. Run static analysis",
+        "6. Create PR"
+      ]
+    },
+    "bugFix": {
+      "steps": [
+        "1. Create fix branch",
+        "2. Write failing test reproducing bug",
+        "3. Fix the bug",
+        "4. Ensure test passes",
+        "5. Run full test suite",
+        "6. Create PR"
+      ]
+    }
+  }
+}
